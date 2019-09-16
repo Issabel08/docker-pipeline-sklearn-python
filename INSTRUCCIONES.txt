@@ -1,0 +1,16 @@
+
+* The model save a file with the results of predictions (you can download to your host with the instruction 3), the file is 'results.csv' whit two columns:
+	- column 'y' has labels of data test.
+	- column 'predictions' has predicted labels of data test.
+
+* If you are working on Windows skip the 'sudo' command and follow the next instructions to execute the pipeline.
+
+
+
+
+1)  sudo docker build -t pipeline_image .
+
+2)  sudo docker run --name pipeline_container pipeline_image
+
+3)  sudo docker cp pipeline_container:/usr/src/app/results/results.csv predictions.csv
+
